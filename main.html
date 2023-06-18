@@ -6,39 +6,39 @@
 <body>
   <div class="calculator">
     <div class="display">
-      <input id="result" type="text" readonly pattern="^[-+]?[0-9]*\.?[0-9]+$">
+      <input type="text" id="result" readonly>
     </div><br>
     <div class="buttons">
       <div class="row">
-        <button onclick="clearDisplay()">AC</button>
-        <button onclick="toggleSign()">+/-</button>
-        <button onclick="display('%')">%</button>
-        <button onclick="display('/')">/</button>
+        <input type="button" value="C" onclick="clearResult()">
+        
+        <input type="button" value="%" onclick="appendToResult('%')">
+        <input type="button" value="/" onclick="appendToResult('/')">
       </div><br>
       <div class="row">
-        <button onclick="display('1')">1</button>
-        <button onclick="display('2')">2</button>
-        <button onclick="display('3')">3</button>
-        <button onclick="display('+')">+</button>
+        <input type="button" value="1" onclick="appendToResult('1')">
+        <input type="button" value="2" onclick="appendToResult('2')">
+        <input type="button" value="3" onclick="appendToResult('3')">
+        <input type="button" value="+" onclick="appendToResult('+')">
       </div><br>
       <div class="row">
-        <button onclick="display('4')">4</button>
-        <button onclick="display('5')">5</button>
-        <button onclick="display('6')">6</button>
-        <button onclick="display('-')">-</button>
+        <input type="button" value="4" onclick="appendToResult('4')">
+        <input type="button" value="5" onclick="appendToResult('5')">
+        <input type="button" value="6" onclick="appendToResult('6')">
+        <input type="button" value="-" onclick="appendToResult('-')">
       </div><br>
       <div class="row">
-        <button onclick="display('7')">7</button>
-        <button onclick="display('8')">8</button>
-        <button onclick="display('9')">9</button>
-        <button onclick="display('*')">*</button>
+        <input type="button" value="7" onclick="appendToResult('7')">
+        <input type="button" value="8" onclick="appendToResult('8')">
+        <input type="button" value="9" onclick="appendToResult('9')">
+        <input type="button" value="*" onclick="appendToResult('*')">
       </div><br>
       
       
       <div class="row">
-        <button class="zero" onclick="appendNumber(0)">0</button>
-        <button onclick="appendDecimal('.')">.</button>
-        <button onclick="calculateResult()">=</button>
+        <input type="button" value="0" onclick="appendToResult('0')">
+        <input type="button" value="=" onclick="calculate()">
+        <input type="button" value="." onclick="appendToResult('.')">
       </div><br>
     </div>
   </div>
